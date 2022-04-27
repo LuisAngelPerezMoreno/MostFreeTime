@@ -2,20 +2,18 @@
 
 **TODO: Add description**
 
-## Installation
+## Compilation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `most_free_time` to your list of dependencies in `mix.exs`:
+`mix compile`:
+`iex -S mix`:
 
-```elixir
-def deps do
-  [
-    {:most_free_time, "~> 0.1.0"}
-  ]
-end
-```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/most_free_time>.
+El algoritmo consiste en poner una entrada como la siguiente: ["12:15PM-02:00PM", "09:00AM-10:00AM", "10:30AM-12:00PM"]
+Y determinar cual es el espacio en horas:minutos que se tiene mas libre, dentro de dichos horarios.
+Para el ejemplo anterior, la respuesta deberia ser "00:30".
+
+## Examples
+
+iex> MostFreeTime.most_free_time(["12:15PM-02:00PM", "09:00AM-10:00AM", "10:30AM-12:00PM"])
+"00:30"
 
